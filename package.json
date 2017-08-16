@@ -1,0 +1,29 @@
+{
+  "name": "sequelizedburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lai-joyce/sequelizedBurger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lai-joyce/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/lai-joyce/sequelizedBurger#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "loglevel": "^1.4.1",
+    "method-override": "^2.3.9",
+    "mysql2": "^1.4.0",
+    "path": "^0.12.7",
+    "sequelize": "^4.4.7"
+  }
+}
