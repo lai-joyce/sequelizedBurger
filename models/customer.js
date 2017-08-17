@@ -5,16 +5,18 @@ module.exports = function(sequelize, DataTypes) {
       // The name identifying the customer
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        // allowNull: false
       }
-    }, {
-      classMethods: {
-        // Customer may consume many burgers
-        associate: function(models) {
-          Customer.hasMany(models.Burger)
-        }
-      }
+      // burgerID: DataTypes.INTEGER
     });
+
+  Customer.associate = function(models) {
+    // Associating Customer with Burger
+    // When a customer is deleted, also delete any associated burgers
+    Customer.hasMany(models.Burger, {
+      onDelete: "cascade"
+    });
+  };
 
   return Customer;
 };
