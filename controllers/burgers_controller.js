@@ -50,9 +50,9 @@ module.exports = function(app) {
 //=========================================
 
 app.post("/burger/create", function(req, res) {
-    return db.Burger.create({
+    db.Burger.create({
         name: req.body.burger_name
-    }).then(function() {
+    }).then(function(dbPost) {
         res.redirect("/index");
     });
 });
