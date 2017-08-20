@@ -38,7 +38,7 @@ app.set("view engine", "handlebars");
 require('./controllers/burgers_controller.js')(app);
 
 // Sync our sequelize models and then start express app
-// Include the {force: true} parameter if you need to update the models
+// Include the {force: true} parameter to drop previous database
 
 db.sequelize.sync({force:true}).then(function() {
 	app.listen(port, function() {
