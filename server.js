@@ -1,19 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var log = require("loglevel");
 var path = require("path");
-
-// Configure logging
-console.log('process.env.NODE_ENV (in server.js) = ' + process.env.NODE_ENV);
-if (process.env.NODE_ENV) { // Production
-	console.log("Setting log level to ERROR");
-	log.setLevel("ERROR");
-} else { // Development
-	var level = process.env.LOG_LEVEL || "DEBUG";
-	console.log("Setting log level to " + level);
-	log.setLevel(level);
-}
 
 //set up Express server
 var app = express();
