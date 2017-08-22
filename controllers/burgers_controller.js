@@ -44,11 +44,11 @@ app.post("/burger/create", function(req, res) {
 });
 
 app.post("/burger/eat/:id", function(req, res) {
-    return db.Customer.update({
-        name: req.body.name
+    db.Customer.create({
+        name: req.body.burgerEater
     }).then(function(newCustomer) {
-        return db.Burger.update({
-            devoured: req.body.devoured,
+        db.Burger.update({
+            devoured: true,
             CustomerId: newCustomer.id
         }, {
             where: {
@@ -61,17 +61,7 @@ app.post("/burger/eat/:id", function(req, res) {
     });
 });
 
-app.post("/burgers/eat/:id", function(req, res) {
-    return db.Burger.update({
-        devoured: req.body.devoured
-    }, {
-        where: {
-            id: req.params.id
-        }
-    }).then(function() {
-        res.redirect("/index");
-    });
-});
+
 
 
 }

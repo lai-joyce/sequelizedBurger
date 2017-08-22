@@ -4,8 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     {
       // The name identifying the customer
       name: {
-        type: DataTypes.STRING
-        // allowNull: false
+        type: DataTypes.STRING,
+        allowNull: false
       }
       // burgerID: DataTypes.INTEGER
     });

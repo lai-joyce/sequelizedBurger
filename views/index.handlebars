@@ -12,7 +12,7 @@
           <form action="burger/eat/{{id}}" method="POST">
             <div class="input-group col-md-12 col-xs-12">
               <li class="form-control">
-                <div class="col-md-7 col-xs-7">{{id}}. {{burger_name}}</div>
+                <div class="col-md-7 col-xs-7">{{id}}. {{name}}</div>
                 <div class="col-md-5 col-xs-5"><input name="burgerEater" type="text" class="form-control burgerEaterTextBox" placeholder="Customer Name"></div>
               </li>
                 <span class="input-group-btn devour-button">
@@ -36,8 +36,8 @@
           {{#if this.devoured}}
             <div class="input-group col-md-12 col-xs-12">
               <li class="form-control">
-                <div class="col-md-6 col-xs-6">{{this.id}}. {{this.burger_name}}</div>
-                <div class="col-md-6 col-xs-6"><i>(Eaten by {{this.customer.name}})<i></div>
+                <div class="col-md-6 col-xs-6">{{this.id}}. {{this.name}}</div>
+                <div class="col-md-6 col-xs-6"><i>(Eaten by {{this.Customer.name}})<i></div>
               </li>
               {{!-- <span class="input-group-btn">
                 
