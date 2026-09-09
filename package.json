@@ -17,14 +17,16 @@
   },
   "homepage": "https://github.com/lai-joyce/sequelizedBurger#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "express-handlebars": "^3.0.0",
-    "loglevel": "^1.4.1",
-    "method-override": "^2.3.9",
-    "mysql": "^2.14.1",
-    "mysql2": "^1.4.0",
-    "path": "^0.12.7",
-    "sequelize": "^4.4.7"
+    "body-parser": "^1.20.6",
+    "express": "^4.22.2",
+    "express-handlebars": "^5.3.5",
+    "loglevel": "^1.9.2",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.11.5",
+    "sequelize": "^6.37.5"
+  },
+  "overrides": {
+    "qs": "^6.16.0",
+    "uuid": "^11.1.1"
   }
 }
